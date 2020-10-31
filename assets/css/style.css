@@ -1,0 +1,1194 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------
+  [Table of contents]
+  * To keep an overview of structure of your code, we make use of table of 
+  * content. Table of content is use display the overall tree structure of your
+  * Layout. 
+  * (NOTE: Remove this commented code once you start developing the code.
+  * Remove the following table of content and add your own as this is just and 
+  * example to let you know)
+
+  1. CSS Reset Code
+    1.1. Eric Meyers Reset/HTML5 display-role reset for older browsers
+    1.2. Clear Fix
+    1.3. Font class declaration
+  2. Body
+  3. Header / .header
+    2.1. Navigation / .navbar
+  4. Content / .content
+    4.1. Left column / .leftcolumn
+    4.2. Right column / .rightcolumn
+    4.3. Sidebar / .sidebar
+      4.3.1. RSS / .rss
+      4.3.2. Search / .search
+      4.3.3. Boxes / .box
+      4.3.4. Sideblog / .sideblog
+      4.3.5. Advertisements / .ads
+  5. Footer / .footer
+  ------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Color codes]
+  * Mention the color code you have used in your html document for the respective
+  * elements given as follow. 
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following color code and add your own as this is just and 
+  * example to let you know)
+
+  Header nav: #e5e5df (Cararra)
+  Header nav a (hover): #fff (white)
+  Header nav a (active): #fff (white)
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+  [Typography]
+  * Mention the Typography you have used in your html document for the respective
+  * elements given as follow.
+  * (NOTE: Remove this commented code once you start developing the code. 
+  * Remove the following typography and add your own as this is just and 
+  * example to let you know)
+
+  Header nav a: 16px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  View-register li a : 12px 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  -------------------------------------------------------------------*/
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+/* html { overflow-y: scroll; } */
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] { vertical-align: text-bottom; }
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em { font-style: italic; }
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup { top: -.7em; }
+
+sub { bottom: -.25em; }
+
+/* 1.2. Clear Fix
+   ========================================================================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after { clear: both; }
+
+.cf { *zoom: 1; }
+
+/* 1.3. Font class declaration
+   ========================================================================== */
+/*
+ * Mention the font property (eg: font-family, font-size, font-weight, font-style
+ * etc) that have been commonly used in the html document. Make a class of it and
+ * apply to the element wherever it is needed. If any single property in changed,
+ * then override only that property in the particular class which is used for the
+ * element.
+ * (NOTE: Remove this commented code once you start 
+ * developing the code. Remove the following font class and add your own
+ * as this is just and example to let you know. If there is only one font family
+ * followed throughout the site, then menstion the font property in body. No need
+ * of creating an extra class for it) */
+
+.futura-bold-font {
+  font-family: 'Futura Bold', 'Gill Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+.wrapper{
+  max-width: 2000px;
+  margin: auto;
+  padding: 0 10.363%;
+}
+a{
+  text-decoration: none;
+  transition: all 0.5s;
+}
+ul{
+  list-style: none;
+}
+body {
+  color: #bfc1c8;
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  background: #1e202b;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+/* ///////////////////////// */
+header {
+  width: 100%;
+  padding: 47px 0;
+  /* padding-bottom: 47px; */
+  background-color: #1e202b;
+}
+
+
+header .logo{
+  float: left;
+}
+header .logoImage{
+  
+  margin-right: 9px;
+  display: inline-block;
+ vertical-align: middle;
+}
+header img{
+  width: 60px;
+}
+header .logoText{
+  display: inline-block;
+  vertical-align: middle;
+}
+header h1{
+  margin-bottom: 4px;
+  /* font-size: 14.3px; */
+  font-size: 15px;
+  color: white;
+  /* line-height: 1.5; */
+}
+header h1::first-letter{
+  display: none;
+  text-transform: uppercase;
+}
+header span{
+  display: block;
+  color: #bfc1c8;
+  font-size: 9.6px;
+}
+header nav{
+  float: right;
+}
+header nav li{
+  margin-left: 6.5px;
+  display: inline-block;
+}
+header nav a{
+  padding: 4.8px 23px ;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  color: #fff;
+  /* font-size: 13.2px; */
+  font-size: 13.2px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+header nav a[title ~= live]{
+  text-transform: none;
+}
+
+header nav a:hover, header .active{
+  border: 2px solid #009ad8;
+  color: #009ad8;
+}
+
+/* /////////////////////////////////////////////////// */
+
+.main-banner{
+  width: 100%;
+  height: 330px;
+  padding: 66px 0px;
+  background-image: url(../images/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.main-banner form{
+  position: relative;
+  margin-bottom: 70px;
+}
+.main-banner form input{
+  outline: none;
+  border: none;
+  padding: 10px;
+  border-radius: 30px;
+}
+.main-banner form input::placeholder{
+  
+  font-weight: 500;
+}
+.main-banner input[type ~= text]{
+  width: 100%;
+    padding: 17px 48px 17px 17px;
+    border: 2px solid #1e202b;
+    background: #1e202b;
+    color: white;
+    letter-spacing: -0.07px;
+    transition: all 0.5s;
+}
+
+.main-banner input[type ~= submit]{
+  position: absolute;
+    top: 4.5px;
+    right: 5px;
+    bottom: 5px;
+    padding: 0px 38px;
+    background-color: #009ad8;
+    color: white;
+    letter-spacing: -0.5px;
+    transition: all 0.5s;
+}
+.main-banner form:hover input[type ~= text]{
+  background: #292d3c;
+  border: 2px solid #009ad8;
+}
+.main-banner input[type ~= submit]:hover {
+  transform: scale(1.15);
+}
+.errorMsg, .errorMsgEmail {
+  position: absolute;
+  left: 2%;
+  top: 100%;
+  color: #ffb8b8;
+  font-weight: 500;
+}
+
+
+.weather-card {
+  width: 49.95%;
+  /* max-width: 535px; */
+  margin: auto;
+  background: #323544;
+  border-radius: 10px;
+  opacity: 1;
+  transition: all 0.5s;
+}
+.weather-fade {
+  opacity: 0.6;
+}
+.weather-head{
+  padding: 10px 10px;
+  border-radius: 10px 10px 0px 0px;
+  font-weight: 500;
+  background-color: #2e303e;
+  /* background-color: blue; */
+}
+.day {
+  float: left;
+  font-size: 13px;
+}
+.date {
+  float: right;
+  font-size: 13px;
+}
+.weather-body {
+
+  padding: 28px 18px;
+  text-align: left;
+}
+.location {
+  font-size: 17.2px;
+    font-weight: 400;
+}
+.degree {
+  /* font-size: 24px; */
+  color: white;
+  font-weight: 700;
+}
+.num {
+  font-size: 85px;
+    margin-right: 30px;
+}
+.num sup{
+  top: -33px;
+  font-size: 65px;
+
+}
+.weather-image{
+  height: 50px;
+  margin-bottom: 15px;
+
+display: inline-block;
+vertical-align: text-bottom;
+}
+.weather-image img{
+  width: 85px;
+}
+.weather-details{
+  margin-right: 18px;
+  font-size: 13.7px;
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.weather-details img{
+  width: 20px;
+  margin-right: 4px;
+  vertical-align: middle;
+ 
+}
+
+
+
+
+
+/* .forecast.today .degree .forecast-icon {
+  display: inline-block;
+  vertical-align: middle; */
+
+  /* .modal {
+    width: 100%; 
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 1%;
+    left: 0;
+    top: 0;
+    overflow: hidden; 
+    background-color: #000;
+    background-color: #00000066;
+  } */
+  .modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 22, 0, 0.6);
+    overflow: hidden;
+  }
+  .modalToggle {
+    display: block;
+  }
+  .modal-scroll {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    background-color: #00106e33;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: 76%;
+   
+
+  } */
+  .modal-content {
+    max-width: 120vh;
+    border-radius: 20px;
+    /* height: 400px; */
+    background: #323544;
+    margin: 40px auto;
+    padding: 20px;
+  }
+  .close {
+    margin: -20px 10px 0px 0px;
+    color: rgb(255 255 255);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.close:hover{
+  transform: scale(1.2);
+}
+  
+  video { width: 100%; }
+  .myImg {width: 100%;}
+/* 
+  .modalOpen{
+    max-height: 700vh;
+     overflow-x: hidden;
+     overflow-y: auto;
+     position: absolute;
+  } */
+  /* .modalOpen{
+    overflow-y:hidden;
+     position: relative;
+      margin-right: var(--widthReflow);
+} */
+.modalOpen { overflow-y: hidden; }
+.body {
+  overflow: hidden;
+}
+
+
+
+/* /////////////////////////////// */
+.live-camera {
+  padding: 238px 0px 96.5px;
+}
+ .live-camera h2{
+   margin-bottom: 20px;
+  font-size: 34px;
+  /* font-size: 2.5714285714em; */
+  font-weight: 300;
+  color: white;
+ }
+ .live-camera h2::first-letter{
+   text-transform: capitalize;
+ }
+ .camera-row {
+   display: flex;
+   justify-content: space-between;
+ }
+.camera-coloumn {
+  width: 23%;
+  
+}
+.live-camera figure{
+  position: relative;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.live-camera-cover:hover{
+  transform: scale(1.1);
+}
+.live-camera figure img{
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 5px;
+}
+.live-camera figure::after{
+  content: " ";
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url(../images/play-button.png);
+}
+
+.camera-location {
+  margin-bottom: 8px;
+  color: white;
+  font-weight: 300;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+.camera-date {
+  display: block;
+  font-size: 10.5px;
+}
+
+
+/* /////////////////////////////////////////// */
+.list-of-content{
+  padding: 66px 0;
+  background-color: #272937;
+}
+.list-content-row{
+  display: flex;
+  justify-content: space-between;
+}
+.list-content-coloumn {
+  width: 31.6%;
+}
+.list-of-content article{
+  padding-left: 96px;
+  position: relative;
+}
+.list-content-number {
+  position: absolute;
+    top: 0;
+    left: 0;
+    color: #009ad8;
+    font-size: 23px;
+}
+.list-of-content h3{
+  margin: 0 0 20px;
+  font-size: 13.1px;
+transition: all 0.35s;
+}
+
+.list-of-content p{
+  font-size: 13.1px;
+  font-weight: 300;
+  line-height: 1.53;
+}
+.list-of-content a{
+  color: white;
+}
+.list-of-content h3:hover{
+  /* transform: scale(1.05); */
+}
+.list-of-content a:hover{
+  color: #009ad8;
+  transform: scale(4.1);
+}
+.list-of-content .list-arrow{
+ /* width: 1px; */
+  /* height: 7px; */ 
+  display: block;
+}
+.list-of-content span img{
+  width: 11px;
+  margin-top: 10px;
+  transition: all 0.5s;
+}
+.list-of-content span img:hover{
+  transform: scale(1.5);
+}
+
+
+/* ///////////////////////////////////////////// */
+.features {
+  padding: 65px 0;
+  background-color: #1e202b;
+}
+.features .wrapper {
+
+  display: flex;
+  /* justify-content: space-between; */
+}
+.features h2 {
+  padding-bottom: 20px;
+  font-size: 33.8px;
+  font-weight: 300;
+  color: #fff;
+}
+.features h2::first-letter{
+  text-transform: capitalize;
+}
+
+
+
+
+.app-feature {
+  width: 32%;
+  /* margin-left: -28px; */
+}
+.app-feature li{
+  position: relative;
+    padding-left: 28px;
+}
+.app-feature li span {
+ 
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+.app-feature li img{
+  width: 11px;
+}
+/* .app-feature li:before {
+  content: " ";
+  width: 12px;
+  height: 7px;
+  background: url(../images/arrow.png);
+  position: absolute;
+  left: 0;
+  top: 5px;
+} */
+.app-feature h3{
+  font-size: 13.2px;
+  
+}
+.app-feature p {
+  padding: 18px 0px 14px;
+  font-size: 13.4px;
+  letter-spacing: -0.1px;
+}
+.app-feature a{
+  color: #fff;
+  transition: all 0.5s;
+}
+.app-feature a:hover{
+  color:#009ad8;
+}
+.app-feature h3::first-letter{
+  text-transform: capitalize;
+}
+
+
+
+
+
+.weather-analysis {
+  width: 31.6%;
+  margin: 0px 25px 0px 25px;
+  /* margin: auto 25px; */
+}
+.weather-analysis li{
+  padding: 8px 0 11.5px;
+  border-bottom: 1px solid #ffffff1a;
+  font-size: 13.1px;
+}
+.weather-analysis li:last-child {
+  border-bottom: none;
+}
+.weather-analysis li img{
+  width: 11px;
+}
+.weather-analysis a{
+  padding-left: 4px;
+  color: white;
+  transition:  all 0.3s;
+}
+.weather-analysis a:hover{
+  /* transform: scale(1.5); */
+  color:#009ad8;
+}
+
+
+
+
+
+.awesome-pic{
+  width: 32.7%;
+margin-right: -35px;
+margin-left: -3px;
+/* padding-left: 3px; */
+}
+.awesome-pic h2 {
+  text-transform: capitalize;
+  margin-left: 4px;
+}
+.awesome-pic ul{
+  /* margin: 0 -5px; */
+}
+
+.awesome-pic li a{
+  width: 33%;
+  padding: 5px;
+  float: left;
+}
+.awesome-pic li img{
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  transition: all 0.5s;
+}
+.awesome-pic li img:hover{
+  transform: scale(1.1);
+  /* color:#009ad8; */
+}
+
+
+
+
+/* //////////////////////////////////////// */
+
+footer {
+  padding: 46px 0;
+  background-color: #272937;
+}
+footer form{
+
+  width: 65.83%;
+  display: inline-block;
+  position: relative;
+  margin-bottom: 30px;
+}
+footer input {
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  color: white;
+  transition: all 0.5s;
+}
+footer input[type ~= email]{
+  width: 100%;
+  padding: 17px 100px 17px 17px;
+  border: 2px solid #1e202b;
+  background: #1e202b;
+  letter-spacing: -0.07px;
+}
+footer input[name ~= subscribe]{
+  padding: 0px 18px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  background-color: #009ad8;
+  letter-spacing: 0px;
+}
+footer form:hover input[type ~= email]{
+  background: #292d3c;
+  border: 2px solid #009ad8;
+}
+footer input[type ~= submit]:hover {
+  transform: scale(1.15);
+}
+.social-icons {
+  /* width: 100%;
+  display: inline-block; */
+  margin-left: 10.74%;
+  display: inline-block;
+  vertical-align: top;
+}
+.social-icons li{
+display: inline;
+  
+}
+.social-icons a {
+  width: 37.46px;
+  height: 37.46px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  text-indent: -9999px;
+  background: #1e202b;
+  /* font-size: 20px; */
+  /* text-align: center; */
+  line-height: 2;
+  transition:all 0.7s;
+
+}
+
+
+.facebook::before, .twitter::before, .google::before, .pintrest::before { 
+/* border-radius: 50%; */
+
+position: absolute;
+/* right: 0;
+margin: auto; */
+/* background-color: #ce5050; */
+color: #009ad8;
+
+font-family: "fontawesome";
+font-weight: 900;
+text-indent: 0;
+font-style: normal;
+font-size: 18.5px;
+ font-weight: normal;
+ line-height: 1;
+}
+.facebook::before { 
+  content: "\f09a";
+left: 33%;
+top: 25%;
+}
+.twitter::before { 
+  content: "\f099";
+  left: 25%;
+top: 25%;
+}
+.google::before { 
+  content: "\f0d5";
+  left: 20%;
+top: 25%;
+}
+.pintrest::before { 
+  content: "\f0d2";
+  left: 27%;
+top: 25%;
+}
+
+.social-icons a:hover{
+
+  background-color: #009ad8;
+}
+.social-icons li:hover .ficon::before {
+  color: #fff;
+}
+
+.copyright {
+  margin: -2px 0px 15px;
+}
+.copyright p{
+ font-size: 13.2px;
+}
+.copyright a{
+  color: #bfc1c8;
+  transition: all 0.3s;
+}
+.copyright a:hover{
+
+  color: #009ad8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ///////////////////////////////////////////// */
+/* media querries  nav class mobileNav */
+@media only screen and (max-width: 995px) {
+  .wrapper {
+    padding: 0 5.363%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header nav li {
+  margin-left: 4.5px;}
+
+  header nav a {
+    padding: 4.8px 14px;}
+    
+
+
+      .weather-card {
+        width: 52.95%;
+        max-width: 400px;}
+      .num {
+        /* font-size: 85px; */
+        margin-right: 11.94%;
+    }
+      .list-of-content article {
+        padding-left: 80px;}
+        .weather-analysis {
+          /* width: 31.6%; */
+          margin: 0px 15px 0px 15px;}
+          .social-icons {
+            margin-left: 9.5%;}  
+
+
+
+
+
+
+
+
+
+
+            .list-content-row {
+              display: block;}
+              .list-content-coloumn {
+                width: 100%;
+                margin: 20px 0px;
+            }
+            .features .wrapper {
+              display: block;}
+              .app-feature {
+                width: 48%;
+                display: inline-block;
+                /* margin-left: -28px; */
+                vertical-align: text-bottom;}
+                .weather-analysis {
+                  width: 48%;
+                  display: inline-block;
+                  margin: 0px 0px 0px 15px;
+              }
+              .awesome-pic {
+                width: 100%;
+                margin: auto;
+            }
+            .awesome-pic li img:hover{
+              transform: scale(1.05);
+              border-radius: 10px;
+              /* color:#009ad8; */
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+@media only screen and (max-width: 767px) {
+
+  header nav {
+    height: 40px;
+    /* border: 2px solid red; */
+    /* border-radius: 50%; */
+}
+.hamburger {
+  height: 40px;
+  width: 40px;
+  padding: 25px;
+  /* margin: 100px; */
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  transition: all 0.5s;
+ 
+}
+.hamburger:hover , .activeHam:hover {
+  border: 2px solid #069ad8;
+ 
+ 
+}
+.hamburger:hover .line{
+  background-color: #069ad8;
+}
+
+.line {
+  height: 2px;
+  width: 20px;
+  display: block;
+  position: absolute;
+  right: 10%;
+  background-color: #fff;
+  transition: all 0.5s;
+}
+
+.line1 { top: 30%;
+left: 30%;}
+.line2 { top: 43%;
+  left: 30%;}
+.line3 { top: 60%;
+  left: 30%;}
+
+.activeHam{
+  right: 15%;
+}
+.activeHam .line1 {
+  top: 45%;
+  transform:  rotateZ(45deg);
+}
+
+.activeHam .line2 { opacity: 0;}
+
+.activeHam .line3{
+  top: 45%;
+  transform: rotateZ(-45deg);
+}
+
+.menu {
+  display: block; 
+    position: absolute;
+    top: 128px;
+    right:  0;
+    background-color: #1e202b;
+    width: 0%;
+    z-index: 10;
+    height: 85%;
+    overflow: hidden;
+    transition: all 0.5s;
+    /* /* border-radius: 30px; */
+}
+header nav li {
+     /* margin-left: 4.5px; */
+     display: block;
+     width: 90%;
+     margin: auto;
+     background-color: #272937;
+     /* /* padding: 15px 0px; */
+     border-bottom: 1px solid #3d3f4b;
+}
+header nav a {
+  display: block;
+  /* padding: 4.8px 14px; */
+  /* margin: 70px; */
+  text-align: center;
+  /* margin: 20px; */
+  padding: 15px;
+}
+header nav a:hover, header .active {
+  border: none;
+  color: #009ad8;
+}
+header nav a{
+  border: none;
+}
+
+header nav li:first-child{
+  border-radius: 10px 10px 0px 0px;
+}
+header nav li:last-child{
+border: none;
+border-radius: 0px 0px 10px 10px;
+}
+
+
+.hamMenuOpen{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.weather-card {
+  width: 100%;}
+  .weather-details {
+    margin-right: 8.4px;
+  }
+  .camera-row {
+    display: block;
+    /* justify-content: space-between; */
+}
+.camera-coloumn {
+  width: 100%;
+  display: block;
+  margin: 32px 0px;
+}
+.live-camera figure {
+  margin-bottom: 22px;}
+.app-feature {
+  width: 100%;
+  display: block;
+  /* margin-left: -28px; */
+  /* vertical-align: text-bottom; */
+}
+.weather-analysis {
+  width: 100%;
+  display: block;
+  margin: 0px 0px 0px 0px;
+}
+.awesome-pic li img:hover {
+  transform: scale(1.1);
+  border-radius: 5px;}
+  footer form {
+    width: 100%;
+    display: block;
+    /* position: relative; */
+    /* margin-bottom: 30px; */
+}
+footer input[name ~= subscribe] {
+  padding: 0px 15px;}
+  .social-icons {
+    margin: auto;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.copyright {
+  margin: 10px 0px 15px;
+}
+
+
+}
