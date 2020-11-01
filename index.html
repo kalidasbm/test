@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Weather-check</title>
+  <meta name="description" lang="en"
+    content="weather check provides detailed information about the weather with rich user interface" />
+  <meta name="keywords" lang="en" content="weather, city, search, climate, current, rain, images" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link rel="stylesheet" href="assets/vendor/fonts.css" />
+  <link href="assets/vendor/fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" media="screen" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!--container starts here-->
+  <div class="container">
+    <!--header starts here-->
+    <header class="cf">
+      <div class="wrapper">
+        <a href="index.html" title="logo" class="logo">
+          <div class="logoImage">
+            <img src="assets/images/logo.png" alt="logo" />
+          </div>
+          <div class="logoText">
+            <h1>company name</h1>
+            <span>tagline goes here</span>
+          </div>
+        </a>
+        <!--nav starts here-->
+        <nav class="mainNav cf">
+          <div class="hamburger" id="hamburger">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="menu">
+            <li><a href="index.html" title="home" class="active">home</a></li>
+            <li><a href="#FIXME" title="news">news</a></li>
+            <li><a href="#FIXME" title="live cameras">Live cameras</a></li>
+            <li><a href="photo.html" title="photos">photos</a></li>
+            <li><a href="#FIXME" title="contact">contact</a></li>
+          </ul>
+        </nav>
+        <!--nav ends here-->
+      </div>
+    </header>
+    <!--header ends here-->
+    <!--main starts here-->
+    <main>
+      <!--main banner starts here-->
+      <div class="main-banner">
+        <div class="wrapper">
+          <form action="#FIXME" method="GET" name="RegForm">
+            <div id="formBar">
+              <input type="text" name="location" id="location" placeholder="Find your location..." />
+              <input type="submit" value="Find" id="submit" />
+            </div>
+          </form>
+          <div class="weather-card">
+            <div class="weather-head cf">
+              <span class="day">Monday</span>
+              <span class="date cf">6 Oct</span>
+            </div>
+            <div class="weather-body">
+              <span class="location">New York</span>
+              <div class="degree">
+                <span class="num">23<sup>o</sup>C</span>
+                <span class="weather-image">
+                  <img src="assets/images/icons/icon-1.svg" id="weather-icon" alt="" width="90" />
+                </span>
+              </div>
+              <span class="weather-details"><img src="assets/images/icon-umberella.png" alt="percipitation" /><span
+                  class="humidity">20%</span>
+              </span>
+              <span class="weather-details"><img src="assets/images/icon-wind.png" alt="wind" /><span
+                  class="wind">18km/h</span></span>
+              <span class="weather-details"><img src="assets/images/icon-compass.png" alt="direction" /><span
+                  class="direction">East</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--main banner ends here-->
+      <!--live camera starts here-->
+      <section class="live-camera">
+        <div class="wrapper">
+          <h2>live cameras</h2>
+          <ul class="camera-row">
+            <li class="camera-coloumn">
+              <figure class="live-camera-cover" id="video1">
+                <img src="assets/images/live-camera-1.jpg" alt="video" />
+              </figure>
+              <h3 class="camera-location">new york</h3>
+              <span class="camera-date">8 oct, 8:00AM</span>
+            </li>
+            <li class="camera-coloumn">
+              <figure class="live-camera-cover" id="video2">
+                <img src="assets/images/live-camera-2.jpg" alt="video" />
+              </figure>
+              <h3 class="camera-location">los angeles</h3>
+              <span class="camera-date">8 oct, 8:00AM</span>
+            </li>
+            <li class="camera-coloumn">
+              <figure class="live-camera-cover" id="video3">
+                <img src="assets/images/live-camera-3.jpg" alt="video" />
+              </figure>
+              <h3 class="camera-location">chicago</h3>
+              <span class="camera-date">8 oct, 8:00AM</span>
+            </li>
+            <li class="camera-coloumn">
+              <figure class="live-camera-cover" id="video4">
+                <img src="assets/images/live-camera-4.jpg" alt="video" />
+              </figure>
+              <h3 class="camera-location">london</h3>
+              <span class="camera-date">8 oct, 8:00AM</span>
+            </li>
+          </ul>
+
+          <div id="myModal" class="modal">
+            <div class="modal-scroll">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <video id="myVideo" controls autoplay muted>
+                  <source src="assets/videos/video1.mp4" type="video/mp4"/>
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--live camera ends here-->
+      <!--list of content starts here-->
+      <div class="list-of-content">
+        <div class="wrapper">
+          <ul class="list-content-row">
+            <li class="list-content-coloumn">
+              <article>
+                <span class="list-content-number"><a href="#FIXME" title="number"> 06.10</a></span>
+                <h3>
+                  <a href="#FIXME" title="article heading">Doloremque laudantium totam sequi
+                  </a>
+                </h3>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Illo saepe assumenda dolorem modi, expedita voluptatum
+                  ducimus necessitatibus. Asperiores quod reprehenderit
+                  necessitatibus harum, mollitia, odit et consequatur maxime
+                  nisi amet doloremque.
+                </p>
+                <span class="list-arrow"><a href="#FIXME" title="show more"><img src="assets/images/arrow.png"
+                      alt="arrow" /></a></span>
+              </article>
+            </li>
+            <li class="list-content-coloumn">
+              <article>
+                <span class="list-content-number"><a href="#FIXME" title="number"> 06.10</a></span>
+                <h3>
+                  <a href="#FIXME" title="article heading">Doloremque laudantium totam sequi
+                  </a>
+                </h3>
+                <p>
+                  Nobis architecto consequatur ab, ea, eum autem aperiam
+                  accusantium placeat vitae facere explicabo temporibus minus
+                  distinctio cum optio quis, dignissimos eius aspernatur fuga.
+                  Praesentium totam, corrupti beatae amet expedita veritatis.
+                </p>
+                <span class="list-arrow"><a href="#FIXME" title="show more"><img src="assets/images/arrow.png"
+                      alt="arrow" /></a></span>
+              </article>
+            </li>
+            <li class="list-content-coloumn">
+              <article>
+                <span class="list-content-number"><a href="#FIXME" title="number"> 06.10</a></span>
+                <h3>
+                  <a href="#FIXME" title="article heading">Doloremque laudantium totam sequi
+                  </a>
+                </h3>
+                <p>
+                  Enim impedit officiis placeat qui recusandae doloremque
+                  possimus, iusto blanditiis, quam optio delectus maiores.
+                  Possimus rerum, velit cum natus eos. Cumque pariatur beatae
+                  asperiores, esse libero quas ad dolorem. Voluptates.
+                </p>
+                <span class="list-arrow"><a href="#FIXME" title="show more"><img src="assets/images/arrow.png"
+                      alt="arrow" /></a></span>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--list of content ends here-->
+      <!--features starts here-->
+      <section class="features">
+        <div class="wrapper cf">
+          <div class="app-feature">
+            <h2>application features</h2>
+            <ul>
+              <li>
+                <span class="feature-arrow"><img src="assets/images/arrow.png" alt="arrow" /></span>
+                <h3>
+                  <a href="#FIXME" title="app-feature">natus error sit voluptatem accusantium</a>
+                </h3>
+                <p>
+                  Doloremque laudantium totam rem aperiam Inventore veritatis
+                  et quasi architecto beatae vitae.
+                </p>
+              </li>
+              <li>
+                <span class="feature-arrow"><img src="assets/images/arrow.png" alt="arrow" /></span>
+                <h3>
+                  <a href="#FIXME" title="app-feature">natus error sit voluptatem accusantium</a>
+                </h3>
+                <p>
+                  Doloremque laudantium totam rem aperiam Inventore veritatis
+                  et quasi architecto beatae vitae.
+                </p>
+              </li>
+              <li>
+                <span class="feature-arrow"><img src="assets/images/arrow.png" alt="arrow" /></span>
+                <h3>
+                  <a href="#FIXME" title="app-feature">natus error sit voluptatem accusantium</a>
+                </h3>
+                <p>
+                  Doloremque laudantium totam rem aperiam Inventore veritatis
+                  et quasi architecto beatae vitae.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="weather-analysis">
+            <h2>weather analyssis</h2>
+            <ul>
+              <li>
+                <span class="weather-arrow"><img src="assets/images/arrow.png" alt="arrow" /></span>
+                <a href="#FIXME" title="analysis">Accusantium doloremque laudantium rem aperiam</a>
+              </li>
+              <li>
+                <span class="weather-arrow"><img src="assets/images/arrow.png" alt="arrow" /></span>
+                <a href="#FIXME" title="analysis">Eaque ipsa quae ab illo inventore veritatis quasi</a>
+              </li>
+              <li>
+                <span class="weather-arrow"><img src="assets/images/arrow.png" alt="arrow" /></span>
+                <a href="#FIXME" title="analysis">Architecto beatae vitae dicta sunt explicabo</a>
+              </li>
+              <li>
+                <span class="weather-arrow"><img src="assets/images/arrow.png" alt="arrow" /></span>
+                <a href="#FIXME" title="analysis">Nemo enim ipsam voluptatem quia voluptas</a>
+              </li>
+              <li>
+                <span class="weather-arrow"><img src="assets/images/arrow.png" alt="arrow" /></span>
+                <a href="#FIXME" title="analysis">Aspernatur aut odit aut fugit, sed quia consequuntur</a>
+              </li>
+              <li>
+                <span class="weather-arrow"><img src="assets/images/arrow.png" alt="arrow" /></span>
+                <a href="#FIXME" title="analysis">Magni dolores eos qui ratione voluptatem sequi</a>
+              </li>
+              <li>
+                <span class="weather-arrow"><img src="assets/images/arrow.png" alt="arrow" /></span>
+                <a href="#FIXME" title="analysis">Neque porro quisquam est qui dolorem ipsum quia</a>
+              </li>
+            </ul>
+          </div>
+          <div class="awesome-pic cf">
+            <h2>awesome photos</h2>
+            <ul>
+              <li class="img-modal">
+                <a href="#FIXME" title="pics"><img src="assets/images/thumb-1.jpg" alt="pic" /></a>
+              </li>
+              <li class="img-modal">
+                <a href="#FIXME" title="pics"><img src="assets/images/thumb-2.jpg" alt="pic" /></a>
+              </li>
+              <li class="img-modal">
+                <a href="#FIXME" title="pics"><img src="assets/images/thumb-3.jpg" alt="pic" /></a>
+              </li>
+              <li class="img-modal">
+                <a href="#FIXME" title="pics"><img src="assets/images/thumb-4.jpg" alt="pic" /></a>
+              </li>
+              <li class="img-modal">
+                <a href="#FIXME" title="pics"><img src="assets/images/thumb-5.jpg" alt="pic" /></a>
+              </li>
+              <li class="img-modal">
+                <a href="#FIXME" title="pics"><img src="assets/images/thumb-6.jpg" alt="pic" /></a>
+              </li>
+              <li class="img-modal">
+                <a href="#FIXME" title="pics"><img src="assets/images/thumb-7.jpg" alt="pic" /></a>
+              </li>
+              <li class="img-modal">
+                <a href="#FIXME" title="pics"><img src="assets/images/thumb-8.jpg" alt="pic" /></a>
+              </li>
+              <li class="img-modal">
+                <a href="#FIXME" title="pics"><img src="assets/images/thumb-9.jpg" alt="pic" /></a>
+              </li>
+            </ul>
+
+            <div id="myModal-img" class="modal">
+              <div class="modal-scroll sl--scrollable">
+                <div class="modal-content">
+                  <span class="close closeImg">&times;</span>
+                  <img src="/assets/images/thumb-1.jpg" alt="img" id="myImg" class="myImg" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--features ends here-->
+    </main>
+    <!--main ends here-->
+    <!--footer starts here-->
+    <footer>
+      <div class="wrapper">
+        <form action="#FIXME" method="GET" name="SubForm">
+          <div id="emailBar">
+            <input type="email" name="email" id="email" placeholder="Enter your email to subscribe..." />
+            <input type="submit" name="subscribe" value="Subscribe" id="subscribe" />
+          </div>
+        </form>
+        <ul class="social-icons">
+          <li>
+            <a href="#FIXME" class="facebook ficon" target="_blank" title="facebook">facebook</a>
+          </li>
+          <li>
+            <a href="#FIXME" class="twitter ficon" target="_blank" title="Twitter">twitter</a>
+          </li>
+          <li>
+            <a href="#FIXME" class="google ficon" target="_blank" title="google">google</a>
+          </li>
+          <li>
+            <a href="#FIXME" class="pintrest ficon" target="_blank" title="pintrest">pintrest</a>
+          </li>
+        </ul>
+        <div class="copyright">
+          <p>
+            <a href="#FIXME" title="copyright-info">Copyright 2014 Company name.</a>
+            Designed by Themezy. All rights reserved
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!--footer ends here-->
+  </div>
+  <!--container ends here-->
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>
