@@ -174,39 +174,6 @@ if (document.URL.includes("index.html")) {
     }
   }
 
-  //=> redirect user to mail client with information filled when user wants to subscribe
-  var subscribe = document.getElementById("subscribe");
-  subscribe.addEventListener("click", function (e) {
-    var body = document.getElementById("email").value,
-      emailLetters = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-      sub = "Subscribe to Weather Check news letter";
-    //to gives error msg if the naming of email is not correct
-    if (!emailLetters.test(body)) {
-      if (!document.querySelector(".errorMsgEmail")) {
-        node = document.createElement("Span");
-        textnode = document.createTextNode("Please enter correct email");
-        node.appendChild(textnode);
-        node.setAttribute("class", "errorMsgEmail");
-        document.getElementById("emailBar").appendChild(node);
-      }
-    } else {
-      //Remove error msg if email is correct
-      if (document.querySelector(".errorMsgEmail")) {
-        document.querySelector(".errorMsgEmail").remove();
-      }
-      //redirect user to email client in new tab for subscription
-      window.open(
-        "mailto:weathercheck@example.com?Subject=" +
-        encodeURIComponent(sub) +
-        "&body=" +
-        encodeURIComponent(body)
-      );
-    }
-    //reset the email value in form
-    document.getElementById("email").value = null;
-    e.preventDefault();
-  });
-
   //=> Modal
   var modal = document.getElementById("myModal"),
     span = document.querySelector(".close"),
@@ -283,3 +250,38 @@ if (document.URL.includes("index.html")) {
     document.body.classList.remove("body");
   };
 }
+
+
+
+  //=> redirect user to mail client with information filled when user wants to subscribe
+  var subscribe = document.getElementById("subscribe");
+  subscribe.addEventListener("click", function (e) {
+    var body = document.getElementById("email").value,
+      emailLetters = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+      sub = "Subscribe to Weather Check news letter";
+    //to gives error msg if the naming of email is not correct
+    if (!emailLetters.test(body)) {
+      if (!document.querySelector(".errorMsgEmail")) {
+        node = document.createElement("Span");
+        textnode = document.createTextNode("Please enter correct email");
+        node.appendChild(textnode);
+        node.setAttribute("class", "errorMsgEmail");
+        document.getElementById("emailBar").appendChild(node);
+      }
+    } else {
+      //Remove error msg if email is correct
+      if (document.querySelector(".errorMsgEmail")) {
+        document.querySelector(".errorMsgEmail").remove();
+      }
+      //redirect user to email client in new tab for subscription
+      window.open(
+        "mailto:weathercheck@example.com?Subject=" +
+        encodeURIComponent(sub) +
+        "&body=" +
+        encodeURIComponent(body)
+      );
+    }
+    //reset the email value in form
+    document.getElementById("email").value = null;
+    e.preventDefault();
+  });
